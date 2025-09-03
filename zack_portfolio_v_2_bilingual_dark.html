@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ziqiang Fan (Zack) — HR × Data Portfolio</title>
+  <meta name="description" content="Ziqiang Fan (Zack) — HR × Data hybrid. Portfolio for roles in HR analytics, people data, and data analysis; also suitable for graduate school applications." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter','system-ui','Avenir','Helvetica','Arial','sans-serif'] },
+          colors: {
+            base: { 900:'#0b0f17',800:'#0f1623',700:'#141c2b',600:'#1a2334',500:'#202a3d' },
+            accent: { 400:'#7dd3fc',500:'#38bdf8',600:'#0ea5e9',700:'#0284c7' }
+          },
+          boxShadow: { glass:'0 10px 30px -10px rgba(0,0,0,0.45)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    html, body { height: 100%; }
+    body { background: radial-gradient(1000px 600px at 20% -10%, rgba(56,189,248,0.12), transparent 60%),
+                    radial-gradient(900px 500px at 90% 10%, rgba(2,132,199,0.12), transparent 60%),
+                    #0b0f17; }
+    .card { background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+            backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.08); }
+    .chip { border: 1px solid rgba(255,255,255,0.14); background: rgba(255,255,255,0.05); }
+  </style>
+</head>
+<body class="text-slate-200 antialiased">
+  <!-- ===== Top Nav ===== -->
+  <header class="sticky top-0 z-50 bg-base-900/70 backdrop-blur border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <a href="#home" class="font-semibold tracking-tight">
+        <span class="text-slate-300">Ziqiang Fan</span>
+        <span class="ml-2 text-xs text-slate-400">(Zack)</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#projects" class="hover:text-white text-slate-300" data-i18n="nav.projects">Projects</a>
+        <a href="#skills" class="hover:text-white text-slate-300" data-i18n="nav.skills">Skills</a>
+        <a href="#experience" class="hover:text-white text-slate-300" data-i18n="nav.experience">Experience</a>
+        <a href="#education" class="hover:text-white text-slate-300" data-i18n="nav.education">Education</a>
+        <a href="#contact" class="hover:text-white text-slate-300" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button id="langBtn" class="px-3 py-1.5 text-xs rounded-full chip hover:bg-white/10 transition" aria-label="Toggle Language">EN / 中文</button>
+        <a id="resumeBtnTop" href="#" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent-600 hover:bg-accent-700 text-white text-xs font-medium transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 16a1 1 0 0 1-.707-.293l-4-4 1.414-1.414L11 12.586V3h2v9.586l2.293-2.293 1.414 1.414-4 4A1 1 0 0 1 12 16z"/><path d="M5 20h14v2H5z"/></svg>
+          <span data-i18n="hero.ctaResume">Download Resume</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section id="home" class="max-w-6xl mx-auto px-4 sm:px-6 pt-14 pb-10">
+    <div class="grid md:grid-cols-3 gap-6 items-center">
+      <div class="md:col-span-2">
+        <div class="inline-flex items-center gap-2 text-xs text-accent-400 bg-accent-600/10 px-2.5 py-1 rounded-full border border-accent-600/30 mb-4">
+          <span>HR × Data</span>
+          <span class="opacity-70">•</span>
+          <span data-i18n="hero.tag">People • Process • Analytics</span>
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          <span data-i18n="hero.title">Ziqiang Fan (Zack)</span>
+        </h1>
+        <p class="mt-4 text-slate-300 leading-relaxed max-w-2xl" data-i18n="hero.subtitle">
+          HR specialist turned data practitioner. I use SQL, Python, and BI tools to solve recruiting, retention, and workforce planning problems.
+        </p>
+        <div class="mt-6 flex flex-wrap items-center gap-3">
+          <a id="resumeBtnHero" href="#" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-accent-600 hover:bg-accent-700 text-white text-sm font-medium transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 16a1 1 0 0 1-.707-.293l-4-4 1.414-1.414L11 12.586V3h2v9.586l2.293-2.293 1.414 1.414-4 4A1 1 0 0 1 12 16z"/><path d="M5 20h14v2H5z"/></svg>
+            <span data-i18n="hero.ctaResume">Download Resume</span>
+          </a>
+          <a id="emailBtnHero" href="#" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-white/10 hover:bg-white/5 text-sm transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v.511l10 6.25 10-6.25V6a2 2 0 0 0-2-2z"/><path d="M22 8.489l-10 6.25-10-6.25V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2z"/></svg>
+            <span data-i18n="hero.ctaEmail">Email Me</span>
+          </a>
+        </div>
+        <p class="mt-3 text-xs text-slate-400" data-i18n="hero.note">Open to HR analytics / people data roles and data analyst positions; also applying to data-related master's programs.</p>
+      </div>
+      <div class="md:col-span-1">
+        <!-- Photo placeholder -->
+        <div class="relative rounded-2xl overflow-hidden border border-white/10 shadow-glass aspect-[1/1] bg-gradient-to-br from-base-700 to-base-600 flex items-center justify-center">
+          <img src="assets/me.jpg" alt="Ziqiang Fan (Zack)" class="w-full h-full object-cover hidden" id="heroPhoto"/>
+          <div id="heroPhotoFallback" class="text-center px-4">
+            <div class="text-4xl">📷</div>
+            <p class="mt-2 text-sm text-slate-300" data-i18n="hero.photo">Add your photo at assets/me.jpg</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Projects ===== -->
+  <section id="projects" class="max-w-6xl mx-auto px-4 sm:px-6 py-6">
+    <div class="flex items-center justify-between">
+      <h2 class="text-xl sm:text-2xl font-bold text-white" data-i18n="projects.title">Selected Projects</h2>
+      <span class="text-xs text-slate-400" data-i18n="projects.caption">Practical HR & data work</span>
+    </div>
+    <div id="projectsGrid" class="mt-4 grid md:grid-cols-2 gap-4"></div>
+  </section>
+
+  <!-- ===== Skills ===== -->
+  <section id="skills" class="max-w-6xl mx-auto px-4 sm:px-6 py-6">
+    <h2 class="text-xl sm:text-2xl font-bold text-white" data-i18n="skills.title">Skills</h2>
+    <div id="skillsGrid" class="mt-4 grid md:grid-cols-3 gap-4"></div>
+  </section>
+
+  <!-- ===== Experience ===== -->
+  <section id="experience" class="max-w-6xl mx-auto px-4 sm:px-6 py-6">
+    <h2 class="text-xl sm:text-2xl font-bold text-white" data-i18n="experience.title">Experience</h2>
+    <div id="expList" class="mt-4 space-y-4"></div>
+  </section>
+
+  <!-- ===== Education ===== -->
+  <section id="education" class="max-w-6xl mx-auto px-4 sm:px-6 py-6">
+    <h2 class="text-xl sm:text-2xl font-bold text-white" data-i18n="education.title">Education</h2>
+    <div id="eduList" class="mt-4 grid md:grid-cols-2 gap-4"></div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+    <div class="card rounded-2xl p-6 shadow-glass">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h3 class="text-lg font-semibold text-white" data-i18n="contact.title">Get in touch</h3>
+          <p class="text-slate-300 text-sm mt-1" data-i18n="contact.note">Open to HR analytics, people data, and data analyst roles; also applying to data-related master's programs. US: +1 217-979-5004 · CN: +86 18519220783</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-3">
+          <a id="emailLink" href="#" class="inline-flex items-center gap-2 px-3 py-2 rounded-xl border border-white/10 hover:bg-white/5 text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v.511l10 6.25 10-6.25V6a2 2 0 0 0-2-2z"/><path d="M22 8.489l-10 6.25-10-6.25V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2z"/></svg>
+            <span data-i18n="contact.email">Email</span>
+          </a>
+          <a id="lnBtn" href="#" target="_blank" class="inline-flex items-center gap-2 px-3 py-2 rounded-xl border border-white/10 hover:bg-white/5 text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zM8 8h3.8v2.2h.1c.5-.9 1.8-2.2 3.8-2.2 4.1 0 4.9 2.7 4.9 6.2V24h-4v-7.1c0-1.7 0-3.9-2.4-3.9-2.4 0-2.8 1.8-2.8 3.8V24H8V8z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a id="ghBtn" href="#" target="_blank" class="inline-flex items-center gap-2 px-3 py-2 rounded-xl border border-white/10 hover:bg-white/5 text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.25.98 11.52c0 4.85 3.14 8.96 7.5 10.41.55.1.75-.24.75-.53 0-.26-.01-1.13-.02-2.06-3.05.66-3.69-1.31-3.69-1.31-.5-1.27-1.22-1.61-1.22-1.61-.99-.68.08-.67.08-.67 1.1.08 1.68 1.14 1.68 1.14.98 1.67 2.58 1.18 3.21.9.1-.71.38-1.18.68-1.45-2.44-.28-5.01-1.22-5.01-5.44 0-1.2.43-2.18 1.13-2.95-.11-.28-.49-1.42.1-2.96 0 0 .92-.29 3.01 1.13a10.47 10.47 0 0 1 5.48 0c2.09-1.42 3.01-1.13 3.01-1.13.59 1.54.22 2.68.11 2.96.71.77 1.13 1.75 1.13 2.95 0 4.23-2.58 5.16-5.03 5.43.39.34.73 1.01.73 2.05 0 1.48-.01 2.68-.01 3.05 0 .29.2.64.76.53 4.35-1.45 7.49-5.56 7.49-10.41C23.02 5.25 18.27.5 12 .5z"/></svg>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-8 text-center text-xs text-slate-500">
+    <p>© <span id="year"></span> <span class="text-slate-300">Ziqiang Fan</span>. <span data-i18n="footer.rights">All rights reserved.</span></p>
+  </footer>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // Links
+    const LINKS = {
+      resume: 'assets/Ziqiang_Fan_Resume.pdf',
+      email: 'mailto:zackkkk1@outlook.com',
+      linkedin: 'https://linkedin.com/in/ziqiang-fan-672607289',
+      github: 'https://github.com/your-username',
+      projects: { bellabeat: '#' }
+    };
+
+    // Wire links
+    document.getElementById('resumeBtnTop').href = LINKS.resume;
+    document.getElementById('resumeBtnHero').href = LINKS.resume;
+    document.getElementById('emailBtnHero').href = LINKS.email;
+    document.getElementById('emailLink').href = LINKS.email;
+    document.getElementById('lnBtn').href = LINKS.linkedin;
+    document.getElementById('ghBtn').href = LINKS.github;
+
+    // i18n content
+    const I18N = {
+      en: {
+        nav: { projects:'Projects', skills:'Skills', experience:'Experience', education:'Education', contact:'Contact' },
+        hero: {
+          tag:'People • Process • Analytics',
+          title:'Ziqiang Fan (Zack)',
+          subtitle:'HR specialist turned data practitioner. I use SQL, Python, and BI tools to solve recruiting, retention, and workforce planning problems.',
+          ctaResume:'Download Resume', ctaEmail:'Email Me',
+          note:"Open to HR analytics / people data roles and data analyst positions; also applying to data-related master's programs.",
+          photo:'Add your photo at assets/me.jpg'
+        },
+        projects: {
+          title:'Selected Projects', caption:'Practical HR & data work',
+          items:[{ title:'Bellabeat Wellness Usage — Case Study', desc:'Cleaned wearable usage logs, built engagement segments, and visualized activity-calorie patterns to inform feature prioritization.', badges:['Python','Pandas','Matplotlib'], link:LINKS.projects.bellabeat, linkLabel:'Notebook' }]
+        },
+        skills: {
+          title:'Skills',
+          groups:[
+            { name:'HR', items:['Recruiting & staffing','Benefits & compliance','Employee relations','Onboarding & HR operations']},
+            { name:'Data', items:['SQL','Python (Pandas, NumPy)','Excel/Sheets','Tableau / Power BI']}
+          ]
+        },
+        experience: {
+          title:'Experience',
+          items:[
+            { company:'Firstseed Construction and Machinery Installation Corp', role:'HR Specialist', period:'Jan 2025 – Present', bullets:[
+              'Supported Phase 1 of GNEM EV battery plant (US$140M, 550k sq.ft) as GC for construction & equipment installation.',
+              'Led recruiting & onboarding for field and admin staff amid fast‑changing site demands.',
+              'Built workforce tracking (deployment, certs, attendance, phases) to improve scheduling & compliance.',
+              'Consolidated payroll/travel/housing to model labor costs for budgeting, bidding, and staffing decisions.'
+            ]},
+            { company:'Wahool (Beijing, China)', role:'Oversea Operating', period:'May 2024 – Jun 2024', bullets:[
+              'Managed TikTok Shop promotion and creator outreach in the U.S. fashion niche.',
+              'Coordinated with store owners for training, activation, and feedback‑driven product ops.'
+            ]},
+            { company:'Beijing BaFang Luda Advertising Co. (Beijing, China)', role:'HR Intern', period:'May 2023 – Aug 2023', bullets:[
+              'Assisted hiring (JDs, interviews, selection) and employee relations support.',
+              'Performed HR data collection/analysis to inform decisions and ensure accuracy.'
+            ]},
+            { company:'Mentpeak Cas, Inc. (Beijing, China)', role:'Research Specialist', period:'May 2021 – Aug 2021', bullets:[
+              'Collected and synthesized research data; presented weekly progress to cross‑functional team.',
+              'Supported software testing, social campaigns, and literature review.'
+            ]}
+          ]
+        },
+        education: {
+          title:'Education',
+          items:[
+            { school:'University of Illinois at Urbana‑Champaign', degree:'Master of Human Resources and Industrial Relations', period:'Sep 2023 – Dec 2024' },
+            { school:'Syracuse University', degree:"B.A. in Psychology, Minor in Japanese Literature (Dean's List, 2022 Fall & Spring)", period:'Sep 2019 – Jun 2023' }
+          ]
+        },
+        contact: { title:'Get in touch', note:"Open to HR analytics, people data, and data analyst roles; also applying to data-related master's programs. US: +1 217-979-5004 · CN: +86 18519220783", email:'Email' },
+        footer: { rights:'All rights reserved.' }
+      },
+      zh: {
+        nav: { projects:'项目', skills:'技能', experience:'经历', education:'教育', contact:'联系' },
+        hero: {
+          tag:'以人为本 · 流程优化 · 数据分析',
+          title:'范子强（Zack）',
+          subtitle:'从 HR 转向数据实务。我用 SQL、Python 与 BI 工具解决招聘、离职与人力规划问题。',
+          ctaResume:'下载简历', ctaEmail:'给我发邮件',
+          note:'开放 HR 数据分析 / 人力分析 以及数据分析岗位；同时申请数据相关研究生项目。',
+          photo:'请将你的照片放在 assets/me.jpg'
+        },
+        projects: {
+          title:'代表项目', caption:'面向业务的 HR × Data 实战',
+          items:[{ title:'Bellabeat 可穿戴使用分析', desc:'清洗使用日志，构建参与度分层；可视化活动‑热量模式，为功能优先级提供依据。', badges:['Python','Pandas','Matplotlib'], link:LINKS.projects.bellabeat, linkLabel:'Notebook' }]
+        },
+        skills: {
+          title:'技能',
+          groups:[
+            { name:'HR', items:['招聘与配置','福利与合规','员工关系','入职与人事运营']},
+            { name:'数据', items:['SQL','Python（Pandas、NumPy）','Excel/Sheets','Tableau / Power BI']}
+          ]
+        },
+        experience: {
+          title:'经历',
+          items:[
+            { company:'Firstseed Construction and Machinery Installation Corp', role:'HR 专员', period:'2025 年 1 月 – 至今', bullets:[
+              '服务于 GNEM 动力电池厂一期项目（投资约 US$140M、面积 55 万平方英尺），作为总包负责施工与设备安装。',
+              '主导现场与后台岗位的招聘与入职，适配快速变化的用工需求。',
+              '建立人力追踪（部署、证书、出勤与工序），优化排班与合规。',
+              '整合薪资/差旅/住宿等成本，搭建人工成本分析模型，为预算、投标与用工决策提供依据。'
+            ]},
+            { company:'Wahool（北京）', role:'海外运营', period:'2024 年 5 月 – 2024 年 6 月', bullets:[
+              '负责 TikTok Shop 推广与达人拓展（美国时尚领域）。',
+              '对接商家培训与激活，基于反馈进行产品与运营优化。'
+            ]},
+            { company:'北京八方路达广告有限公司', role:'人力资源实习生', period:'2023 年 5 月 – 2023 年 8 月', bullets:[
+              '参与招聘流程（JD、面试、甄选）与员工关系支持。',
+              '开展 HR 数据收集与分析，提升决策与数据准确性。'
+            ]},
+            { company:'Mentpeak Cas, Inc.（北京）', role:'研究专员', period:'2021 年 5 月 – 2021 年 8 月', bullets:[
+              '收集并整合研究资料，跨组协作并进行周报汇报。',
+              '支持软件测试、社媒活动与文献检索。'
+            ]}
+          ]
+        },
+        education: {
+          title:'教育',
+          items:[
+            { school:'伊利诺伊大学厄巴纳‑香槟分校（UIUC）', degree:'人力资源与劳动关系 硕士', period:'2023 年 9 月 – 2024 年 12 月' },
+            { school:'雪城大学（Syracuse University）', degree:'心理学 学士，日语文学 辅修（2022 秋&春 院长名单）', period:'2019 年 9 月 – 2023 年 6 月' }
+          ]
+        },
+        contact: { title:'联系我', note:'欢迎 HR 数据分析 / 人力分析 与数据分析岗位机会；也在申请数据相关研究生项目。美国：+1 217-979-5004 · 大陆：+86 18519220783', email:'邮箱' },
+        footer: { rights:'保留所有权利。' }
+      }
+    };
+
+    let currentLang = 'en';
+
+    function renderBasicTexts() {
+      ['nav.projects','nav.skills','nav.experience','nav.education','nav.contact',
+       'hero.tag','hero.title','hero.subtitle','hero.ctaResume','hero.ctaEmail','hero.note',
+       'projects.title','projects.caption',
+       'skills.title',
+       'experience.title',
+       'education.title',
+       'contact.title','contact.note','contact.email',
+       'footer.rights'].forEach(key => {
+        document.querySelectorAll(`[data-i18n="${key}"]`).forEach(el => {
+          const value = key.split('.').reduce((o,k)=> (o||{})[k], I18N[currentLang]);
+          if (typeof value === 'string') el.textContent = value;
+        });
+      });
+      document.title = (currentLang==='en') ? 'Ziqiang Fan (Zack) — HR × Data Portfolio' : '范子强（Zack）— HR × Data 作品集';
+    }
+
+    function badgeEl(text){ const span=document.createElement('span'); span.className='chip text-xs rounded-full px-2 py-0.5'; span.textContent=text; return span; }
+
+    function renderProjects(){
+      const grid = document.getElementById('projectsGrid'); grid.innerHTML='';
+      I18N[currentLang].projects.items.forEach(p => {
+        const card=document.createElement('article'); card.className='card rounded-2xl p-5 shadow-glass hover:translate-y-[-2px] transition';
+        const h=document.createElement('h3'); h.className='text-white font-semibold'; h.textContent=p.title;
+        const d=document.createElement('p'); d.className='mt-2 text-sm text-slate-300'; d.textContent=p.desc;
+        const chips=document.createElement('div'); chips.className='mt-3 flex flex-wrap gap-2'; p.badges.forEach(b=>chips.appendChild(badgeEl(b)));
+        const a=document.createElement('a'); a.href=p.link||'#'; a.target='_blank'; a.className='mt-4 inline-flex items-center gap-2 text-sm text-accent-500 hover:text-accent-400'; a.innerHTML = `<span>${p.linkLabel}</span><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3h7v7h-2V6.414l-9.293 9.293-1.414-1.414L17.586 5H14V3z"/><path d="M5 5h5V3H3v7h2V5z"/></svg>`;
+        card.append(h,d,chips,a); grid.appendChild(card);
+      });
+    }
+
+    function renderSkills(){
+      const grid=document.getElementById('skillsGrid'); grid.innerHTML='';
+      I18N[currentLang].skills.groups.forEach(g=>{
+        const card=document.createElement('div'); card.className='card rounded-2xl p-5 shadow-glass';
+        const h=document.createElement('h3'); h.className='text-white font-semibold'; h.textContent=g.name;
+        const ul=document.createElement('ul'); ul.className='mt-3 space-y-1 text-sm text-slate-300 list-disc list-inside';
+        g.items.forEach(it=>{ const li=document.createElement('li'); li.textContent=it; ul.appendChild(li); });
+        card.append(h,ul); grid.appendChild(card);
+      });
+    }
+
+    function renderExperience(){
+      const box=document.getElementById('expList'); box.innerHTML='';
+      I18N[currentLang].experience.items.forEach(item=>{
+        const wrap=document.createElement('div'); wrap.className='card rounded-2xl p-5 shadow-glass';
+        const top=document.createElement('div'); top.className='flex flex-col sm:flex-row sm:items-center justify-between gap-2';
+        const left=document.createElement('div');
+        const role=document.createElement('div'); role.className='text-white font-semibold'; role.textContent=item.role;
+        const company=document.createElement('div'); company.className='text-sm text-slate-300'; company.textContent=item.company;
+        left.append(role,company);
+        const period=document.createElement('div'); period.className='text-xs text-slate-400'; period.textContent=item.period;
+        top.append(left,period);
+        const ul=document.createElement('ul'); ul.className='mt-3 space-y-2 text-sm text-slate-300 list-disc list-inside';
+        item.bullets.forEach(b=>{ const li=document.createElement('li'); li.textContent=b; ul.appendChild(li); });
+        wrap.append(top,ul); box.appendChild(wrap);
+      });
+    }
+
+    function renderEducation(){
+      const grid=document.getElementById('eduList'); grid.innerHTML='';
+      I18N[currentLang].education.items.forEach(e=>{
+        const card=document.createElement('div'); card.className='card rounded-2xl p-5 shadow-glass';
+        const school=document.createElement('div'); school.className='text-white font-semibold'; school.textContent=e.school;
+        const deg=document.createElement('div'); deg.className='text-sm text-slate-300'; deg.textContent=e.degree;
+        const period=document.createElement('div'); period.className='text-xs text-slate-400 mt-1'; period.textContent=e.period;
+        card.append(school,deg,period); grid.appendChild(card);
+      });
+    }
+
+    function renderAll(){ renderBasicTexts(); renderProjects(); renderSkills(); renderExperience(); renderEducation(); }
+
+    document.getElementById('langBtn').addEventListener('click', ()=>{ currentLang = currentLang==='en' ? 'zh' : 'en'; renderAll(); });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Initial render
+    renderAll();
+  </script>
+</body>
+</html>
